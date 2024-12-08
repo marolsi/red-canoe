@@ -334,6 +334,7 @@ p {
     align-items: center;
     justify-content: center;
     box-shadow: none;
+    flex-shrink: 0;
 }
 
 .carousel-button:hover {

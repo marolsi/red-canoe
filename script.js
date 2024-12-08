@@ -1,4 +1,4 @@
-// Navbar visibility
+// Navbar visibility and background
 const navbar = document.querySelector('.navbar');
 const whoWeAreSection = document.querySelector('#who-we-are');
 
@@ -6,8 +6,10 @@ const showNavbar = () => {
     const triggerHeight = whoWeAreSection.offsetTop - 100;
     if (window.scrollY >= triggerHeight) {
         navbar.classList.add('visible');
+        navbar.classList.add('navbar-grey');
     } else {
         navbar.classList.remove('visible');
+        navbar.classList.remove('navbar-grey');
     }
 };
 
@@ -22,12 +24,12 @@ document.addEventListener('scroll', () => {
     const contactTop = contactSection.offsetTop;
     const scrollPosition = window.scrollY + navbar.offsetHeight;
 
-    if (scrollPosition >= portfolioTop && scrollPosition < contactTop) {
+    if (scrollPosition >= portfolioTop) {
         navbar.classList.add('navbar-transparent');
-    } else if (scrollPosition >= contactTop) {
-        navbar.classList.add('navbar-transparent');
+        navbar.classList.remove('navbar-grey');
     } else {
         navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('navbar-grey');
     }
 });
 
