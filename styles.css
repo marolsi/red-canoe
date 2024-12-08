@@ -103,15 +103,16 @@ p {
 }
 
 .logo-container {
-    width: 80%;
-    max-width: 800px;
-    height: 500px;
-    background-image: url('/images/RedCanoePlumbingLogo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 2rem auto;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
     transition: transform 0.3s ease;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .logo-container:hover {
